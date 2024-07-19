@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import logo from '../assets/logo.svg';
+import featureImage from '../assets/feature.svg'; // Add your SVG file in assets
+
 
 export default function Navbar() {
   const { currentUser, logout } = useAuth();
@@ -14,8 +16,8 @@ export default function Navbar() {
   return (
     <nav className="bg-blue-500 p-4 flex justify-between items-center">
       <div className="flex items-center">
-        <img src={logo} alt="Logo" className="h-8 w-8 mr-2" />
-        <Link to="/" className="text-white text-lg font-semibold">ShipmentApp</Link>
+        <img src={featureImage} alt="Logo" className="h-8 w-8 mr-2" />
+        <Link to="/" className="text-white text-lg font-semibold">ShipMate</Link>
       </div>
       <div className="hidden md:flex items-center space-x-4">
         <Link to="/track" className="text-white">Track Shipment</Link>

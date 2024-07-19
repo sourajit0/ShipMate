@@ -1,4 +1,4 @@
-// src/authUtils.js
+
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from './firebase/firebaseConfig'; // Make sure this path is correct
 

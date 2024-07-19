@@ -1,4 +1,5 @@
 {
+  "homepage": "https://<your-github-username>.github.io/<repository-name>",
   "name": "shipment-delivery-app",
   "version": "0.1.0",
   "private": true,
@@ -13,6 +14,7 @@
     "buffer": "^6.0.3",
     "crypto-js": "^3.1.9-1",
     "firebase": "^10.12.3",
+    "gh-pages": "^6.1.1",
     "postcss-cli": "^11.0.0",
     "process": "^0.11.10",
     "razorpay": "^2.9.4",
@@ -21,6 +23,7 @@
     "react-router-dom": "^6.25.1",
     "react-scripts": "5.0.1",
     "stream-browserify": "^3.0.0",
+    "vm-browserify": "^1.1.2",
     "web-vitals": "^2.1.4",
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4"
