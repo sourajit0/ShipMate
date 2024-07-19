@@ -11,8 +11,7 @@
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 ShipMate is a web application enabling users to manage shipments and track their delivery status. It offers a user-friendly interface with responsive design for seamless navigation and interaction across devices.
