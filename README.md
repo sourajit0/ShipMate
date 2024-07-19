@@ -96,6 +96,6 @@ ShipMate is a web application enabling users to manage shipments and track their
 
 ## Screenshots
 
-![Shipment Tracking](screenshots2.png)
+![Shipment Tracking](screenshot2.png)
 
 
