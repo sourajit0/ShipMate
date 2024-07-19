@@ -1,4 +1,4 @@
-/*
+
 # ShipMate - Shipment Delivery Application
 
 [Live Application](https://shipmate.netlify.app/)
@@ -98,5 +98,5 @@ ShipMate is a web application enabling users to manage shipments and track their
 ## Screenshots
 
 ![Shipment Tracking](screenshots2.png)
-*/
+
 
