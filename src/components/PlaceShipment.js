@@ -4,7 +4,7 @@ import { addDoc, collection } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import Razorpay from 'razorpay';
 import { nanoid } from 'nanoid';
-import { useAuth } from '../context/AuthContext'; // Use useAuth hook
+import { useAuth } from '../context/AuthContext';
 
 export default function PlaceShipment() {
   const [sender, setSender] = useState('');
@@ -31,9 +31,9 @@ export default function PlaceShipment() {
 
       // Create initial tracking states
       const initialTrackingStates = [
-        { status: 'Shipment Created', timestamp: new Date().toISOString() },
-        { status: 'Pending', timestamp: '' },
+        { status: 'Ordered', timestamp: new Date().toISOString() },
         { status: 'Shipped', timestamp: '' },
+        { status: 'In Transit', timestamp: '' },
         { status: 'Out for Delivery', timestamp: '' },
         { status: 'Delivered', timestamp: '' },
       ];
@@ -46,7 +46,7 @@ export default function PlaceShipment() {
         sourceAddress,
         destinationAddress,
         trackingID,
-        status: 'Shipment Created',
+        status: 'Ordered',
         trackingStates: initialTrackingStates,
         email: currentUser.email, // Associate shipment with current user's email
       });
