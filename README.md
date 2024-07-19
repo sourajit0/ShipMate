@@ -1,71 +1,102 @@
-# Getting Started with Create React App
+/*
+# ShipMate - Shipment Delivery Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live Application](https://shipmate.netlify.app/)
 
-## Available Scripts
+![ShipMate Screenshot](screenshot1.png)
 
-In the project directory, you can run:
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Introduction
+ShipMate is a web application enabling users to manage shipments and track their delivery status. It offers a user-friendly interface with responsive design for seamless navigation and interaction across devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+- **User Registration and Login**: Secure authentication using Firebase.
+- **Shipment Management**: Initiate new shipments with detailed information.
+- **Payment Integration**: Calculate shipping charges and process payments using Razorpay.
+- **Tracking System**: Monitor shipment statuses and view shipment history.
+- **Responsive Design**: Accessible on various devices and screen sizes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
+- **Frontend**: React, Tailwind CSS
+- **Backend**: Firebase (Authentication, Firestore)
+- **Payment Gateway**: Razorpay
+- **Deployment**: Netlify
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+- Node.js
+- Firebase account
+- Razorpay account
 
-### `npm run build`
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sourajit0/ShipMate.git
+   cd ShipMate
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Set Up Firebase
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Create a Firebase Project**:
+   - Go to the [Firebase Console](https://console.firebase.google.com/).
+   - Click on "Add project" and follow the setup wizard to create a new project.
 
-### `npm run eject`
+2. **Enable Authentication and Firestore**:
+   - In the Firebase Console, navigate to the "Authentication" section and click on "Get Started" to enable authentication methods (e.g., Email/Password).
+   - Go to the "Firestore Database" section and click on "Create database" to set up Firestore.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Add Firebase Configuration**:
+   - In your Firebase project settings, find the "General" tab and scroll down to "Your apps" section. Click on the web icon (</>) to register your app.
+   - Copy the Firebase config object from the Firebase Console.
+   - Create a `.env` file in the root of your project (if it doesn't already exist) and add the Firebase config as follows:
+     ```env
+     REACT_APP_FIREBASE_API_KEY=your_api_key
+     REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+     REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+     REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+     REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+     REACT_APP_FIREBASE_APP_ID=your_app_id
+     REACT_APP_FIREBASE_MEASUREMENT_ID=your_measurement_id
+     ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Set Up Razorpay
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Create a Razorpay Account**:
+   - Go to the [Razorpay Dashboard](https://dashboard.razorpay.com/).
+   - Sign up or log in to your account and navigate to the "API Keys" section under the "Settings" tab.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Obtain API Keys**:
+   - Generate new API keys and copy the `Key ID` and `Key Secret`.
 
-## Learn More
+3. **Add API Keys to the `.env` File**:
+   - In the same `.env` file where you added Firebase config, add the Razorpay API keys:
+     ```env
+     REACT_APP_RAZORPAY_KEY_ID=your_key_id
+     REACT_APP_RAZORPAY_KEY_SECRET=your_key_secret
+     ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Start the Development Server
+1. **Run the Development Server**:
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Screenshots
 
-### Code Splitting
+![Shipment Tracking](screenshots2.png)
+*/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# ShipMate
